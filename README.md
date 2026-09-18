@@ -1,6 +1,6 @@
 # Movie Explorer
 
-A small React app to browse TV shows and movies using the TVMaze API. Built for the Programming Hero assignment.
+A simple React app to browse TV shows and movies using the TVMaze API. Built for the Programming Hero assignment -2.
 
 ## Features
 
