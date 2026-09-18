@@ -1,16 +1,39 @@
-# React + Vite
+# Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app to browse TV shows and movies using the TVMaze API. Built for the Programming Hero assignment.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Home page with a hero section and a CTA to the movie listing
+- Browse shows fetched from TVMaze (first 60 results)
+- Live search with a 400ms debounce so it doesn't spam the API
+- Modal popup with full details when you click "See Details"
+- Fully responsive — single column on mobile, grid on desktop
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (with hooks)
+- Vite
+- React Router for navigation
+- Plain CSS (no Tailwind or libraries)
 
-## Expanding the ESLint configuration
+## API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+TVMaze — https://www.tvmaze.com/api
+- `GET /shows` — all shows
+- `GET /search/shows?q=query` — search
+
+## How to Run
+
+1. Clone the repo
+2. `npm install`
+3. `npm run dev`
+4. Open http://localhost:5173
+
+## What I Learned
+
+- **Debouncing search with useEffect**: I used setTimeout inside useEffect and cleared it in the cleanup so typing quickly doesn't fire a request on every keystroke. I also added an `ignore` flag so an old slow response can't overwrite a newer one.
+- **Modals with createPortal**: Rendering the modal into document.body instead of inside the page tree avoids z-index and overflow issues.
+- **Escape key + body scroll lock**: Had to remember to remove the event listener and reset `body.style.overflow` in the effect cleanup, otherwise the page stays frozen after closing.
+- **Stripping HTML from API text**: The TVMaze summary comes with `<p>` tags. I used DOMParser to get plain text instead of `dangerouslySetInnerHTML`.
+- **Slicing large API responses**: `/shows` returns hundreds of items — slicing to 60 made the page load noticeably faster.
