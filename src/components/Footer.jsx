@@ -10,7 +10,7 @@ export default function Footer() {
         </p>
         <div className="footer-links">
           <a
-            href="https://github.com"
+            href="https://github.com/mir-ishtiaq/movie-explorer"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-link"
