@@ -7,10 +7,10 @@
   text-align: center;
   padding: 3rem 1.5rem;
   background-image: linear-gradient(
-      rgba(15, 17, 21, 0.85),
-      rgba(15, 17, 21, 0.95)
+      rgba(15, 17, 21, 0.6),
+      rgba(15, 17, 21, 0.8)
     ),
-    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80');
+    url('https://images.unsplash.com/photo-1587986100063-d1c34ca3dc6b?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
