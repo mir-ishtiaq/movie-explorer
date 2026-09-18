@@ -1,0 +1,47 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.not-found-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.not-found-code {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.not-found-text {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.not-found-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  padding: 0.75rem 1.75rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+}
+
+.not-found-link:hover {
+  background-color: var(--accent-hover);
+}

@@ -1,0 +1,58 @@
+.listing-page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.listing-main {
+  flex: 1;
+  padding: 2rem 1.25rem;
+}
+
+.listing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.listing-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.listing-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.listing-search-row {
+  max-width: 600px;
+  width: 100%;
+}
+
+.listing-searching-indicator {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.listing-no-results {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  background-color: var(--bg-surface);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+@media (min-width: 768px) {
+  .listing-title {
+    font-size: 2.5rem;
+  }
+}

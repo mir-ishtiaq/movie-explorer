@@ -1,0 +1,71 @@
+.hero-section {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-image: linear-gradient(
+      rgba(15, 17, 21, 0.85),
+      rgba(15, 17, 21, 0.95)
+    ),
+    url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.15;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+.hero-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 0.85rem 2.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  min-height: var(--touch-target-min);
+  margin-top: 0.75rem;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.hero-cta-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
+}

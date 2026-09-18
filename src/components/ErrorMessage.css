@@ -1,0 +1,49 @@
+.error-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #2a1114;
+  border: 1px solid #5a1921;
+  border-radius: var(--radius-md);
+  color: #fca5a5;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.error-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.error-message {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.error-retry-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target-min);
+  padding: 0.4rem 1.25rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background-color var(--transition-fast);
+}
+
+.error-retry-btn:hover {
+  background-color: var(--accent-hover);
+}
